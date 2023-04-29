@@ -1,0 +1,29 @@
+Navigate to mpi_code folder-
+    nvcc mpi_main_call.cu -o ../exefiles/mpi_renderer_img "C:/Program Files/MPI/MS_MPI/SDK/Lib/x64/msmpi.lib"
+    mpiexec -n 1 ../exefiles/mpi_renderer_img > ../images/mpi_random_triangles_10k.ppm
+Navigate to main folder -
+    nvcc -arch=sm_60 -lineinfo main.cu -o ./exefiles/master_renderer_gpu -L./src/lib-vc2019 -lglfw3_mt -lopengl32 -luser32 -lgdi32 
+
+For cpu 
+    g++ main.cpp -o ./exefiles/master_renderer
+    ./exefiles/master_renderer -11 -10 -736 -640 -linear > ./images/option_1.ppm  
+
+For commands  1-21
+    ./exefiles/master_renderer_gpu -10 -100 -736 -640 -bvh
+    -name -option_no -no_of_objects -nx -ny -bvh_or_linear
+
+For commands 22-26
+    ./exefiles/master_renderer_gpu -22 -10000 -736 -640 -bvh -random
+    -name -option_no -no_of_objects -nx -ny -bvh_or_bvh_sah -random_or_model_name
+
+for commands 27
+    ./exefiles/master_renderer_gpu -27 -100000 -736 -640 -./models/satellite.obj -depth -4
+    -name -option_no -no_of_objects -nx -ny -random_model_name -depth_or_recursive_metal -samples
+    
+for commands 31
+    ./exefiles/master_renderer_gpu -31 -100000 -736 -640 -interleaved -0 -8
+    -name -option_no -no_of_objects -nx -ny -interleaved_or_not -depth_of_rays -samplesXsamples
+
+for command 29
+    ./exefiles/master_renderer_gpu -29 -3201 -1344 -1280 -bvh
+    //one final render
