@@ -57,12 +57,12 @@ Navigate to main folder -
       -name -option_no -no_of_objects -nx -ny -bvh_or_linear
   ```
  ### Options 22-26
- * The renders in this part explores the capabilities of our renderer in rendering simple to complex 3d models at blazingly fast speeds.
+* The renders in this part explores the capabilities of our renderer in rendering simple to complex 3d models at blazingly fast speeds.
   * To run we can use - 
   ```
   For commands 22-26
-      ./exefiles/master_renderer_gpu -22 -10000 -736 -640 -bvh -random
-      -name -option_no -no_of_objects -nx -ny -bvh_or_bvh_sah -random_or_model_name
+     ./exefiles/master_renderer_gpu -22 -10000 -736 -640 -bvh -random
+     -name -option_no -no_of_objects -nx -ny -bvh_or_bvh_sah -random_or_model_name
   ```
 ### Option 27
 * We try to render relatively simple scenes in real time for this part of our renderer.
@@ -93,4 +93,8 @@ Navigate to main folder -
   ![image](https://user-images.githubusercontent.com/66525380/235729396-4d6f5f50-3fc9-487b-95c4-34017dcb931f.png)
 
 - Option 27
+ * 4K metal triangles rendered in real time > 40fps
+ 
+ https://user-images.githubusercontent.com/66525380/235732157-52d07831-29e4-49f4-877b-1e56703bc2a9.mp4
+
 
