@@ -1,12 +1,10 @@
 Navigate to mpi_code folder-
     nvcc mpi_main_call.cu -o ../exefiles/mpi_renderer_img "C:/Program Files/MPI/MS_MPI/SDK/Lib/x64/msmpi.lib"
     mpiexec -n 1 ../exefiles/mpi_renderer_img > ../images/mpi_random_triangles_10k.ppm
+
 Navigate to main folder -
     nvcc -arch=sm_60 -lineinfo main.cu -o ./exefiles/master_renderer_gpu -L./src/lib-vc2019 -lglfw3_mt -lopengl32 -luser32 -lgdi32 
 
-For cpu 
-    g++ main.cpp -o ./exefiles/master_renderer
-    ./exefiles/master_renderer -11 -10 -736 -640 -linear > ./images/option_1.ppm  
 
 For commands  1-21
     ./exefiles/master_renderer_gpu -10 -100 -736 -640 -bvh
